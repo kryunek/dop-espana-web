@@ -122,6 +122,167 @@ const DOP_SEEDS: DopSeed[] = [
   { name: "Alcachofa de Benicarló / Carxofa de Benicarló", family: "Hortaliza", region: "Comunidad Valenciana", lat: 40.42, lng: 0.42 },
 ];
 
+const WINE_DOP_SEEDS: DopSeed[] = [
+  { name: "Cava", family: "Vino", region: "Supraautonómico", lat: 41.39, lng: 1.74 },
+  { name: "Jumilla", family: "Vino", region: "Murcia / Castilla-La Mancha", lat: 38.48, lng: -1.33 },
+  { name: "Rioja", family: "Vino", region: "La Rioja / País Vasco / Navarra", lat: 42.46, lng: -2.45 },
+  { name: "Condado de Huelva", family: "Vino", region: "Andalucía", lat: 37.39, lng: -6.55 },
+  { name: "Granada", family: "Vino", region: "Andalucía", lat: 37.18, lng: -3.6 },
+  { name: "Jerez-Xérès-Sherry / Jerez / Xérès / Sherry", family: "Vino", region: "Andalucía", lat: 36.69, lng: -6.14 },
+  { name: "Lebrija", family: "Vino", region: "Andalucía", lat: 36.92, lng: -6.07 },
+  { name: "Málaga", family: "Vino", region: "Andalucía", lat: 36.72, lng: -4.42 },
+  { name: "Manzanilla-Sanlúcar de Barrameda / Manzanilla", family: "Vino", region: "Andalucía", lat: 36.78, lng: -6.35 },
+  { name: "Montilla-Moriles", family: "Vino", region: "Andalucía", lat: 37.59, lng: -4.64 },
+  { name: "Sierras de Málaga", family: "Vino", region: "Andalucía", lat: 36.72, lng: -4.42 },
+  { name: "Aylés", family: "Vino", region: "Aragón", lat: 41.64, lng: -0.79 },
+  { name: "Calatayud", family: "Vino", region: "Aragón", lat: 41.35, lng: -1.64 },
+  { name: "Campo de Borja", family: "Vino", region: "Aragón", lat: 41.83, lng: -1.53 },
+  { name: "Cariñena", family: "Vino", region: "Aragón", lat: 41.34, lng: -1.22 },
+  { name: "Somontano", family: "Vino", region: "Aragón", lat: 42.04, lng: 0.13 },
+  { name: "Urbezo", family: "Vino", region: "Aragón", lat: 41.29, lng: -1.1 },
+  { name: "Cangas", family: "Vino", region: "Asturias", lat: 43.18, lng: -6.55 },
+  { name: "Binissalem", family: "Vino", region: "Islas Baleares", lat: 39.69, lng: 2.84 },
+  { name: "Pla i Llevant", family: "Vino", region: "Islas Baleares", lat: 39.56, lng: 3.2 },
+  { name: "Abona", family: "Vino", region: "Canarias", lat: 28.12, lng: -16.58 },
+  { name: "El Hierro", family: "Vino", region: "Canarias", lat: 27.74, lng: -18.02 },
+  { name: "Gran Canaria", family: "Vino", region: "Canarias", lat: 28.1, lng: -15.43 },
+  { name: "Islas Canarias", family: "Vino", region: "Canarias", lat: 28.29, lng: -16.63 },
+  { name: "La Gomera", family: "Vino", region: "Canarias", lat: 28.12, lng: -17.23 },
+  { name: "La Palma", family: "Vino", region: "Canarias", lat: 28.68, lng: -17.76 },
+  { name: "Lanzarote", family: "Vino", region: "Canarias", lat: 29.04, lng: -13.63 },
+  { name: "Tacoronte-Acentejo", family: "Vino", region: "Canarias", lat: 28.48, lng: -16.41 },
+  { name: "Valle de Güímar", family: "Vino", region: "Canarias", lat: 28.31, lng: -16.41 },
+  { name: "Valle de la Orotava", family: "Vino", region: "Canarias", lat: 28.39, lng: -16.52 },
+  { name: "Ycoden-Daute-Isora", family: "Vino", region: "Canarias", lat: 28.36, lng: -16.73 },
+  { name: "Abadía Retuerta", family: "Vino", region: "Castilla y León", lat: 41.62, lng: -4.23 },
+  { name: "Arlanza", family: "Vino", region: "Castilla y León", lat: 42.04, lng: -3.75 },
+  { name: "Arribes", family: "Vino", region: "Castilla y León", lat: 41.22, lng: -6.57 },
+  { name: "Bierzo", family: "Vino", region: "Castilla y León", lat: 42.55, lng: -6.59 },
+  { name: "Cebreros", family: "Vino", region: "Castilla y León", lat: 40.46, lng: -4.46 },
+  { name: "Cigales", family: "Vino", region: "Castilla y León", lat: 41.76, lng: -4.7 },
+  { name: "Dehesa Peñalba", family: "Vino", region: "Castilla y León", lat: 41.55, lng: -4.44 },
+  { name: "León", family: "Vino", region: "Castilla y León", lat: 42.6, lng: -5.57 },
+  { name: "Ribera del Duero", family: "Vino", region: "Castilla y León", lat: 41.67, lng: -3.69 },
+  { name: "Rueda", family: "Vino", region: "Castilla y León", lat: 41.41, lng: -4.96 },
+  { name: "Sierra de Salamanca", family: "Vino", region: "Castilla y León", lat: 40.48, lng: -5.89 },
+  { name: "Tierra del Vino de Zamora", family: "Vino", region: "Castilla y León", lat: 41.5, lng: -5.74 },
+  { name: "Toro", family: "Vino", region: "Castilla y León", lat: 41.52, lng: -5.39 },
+  { name: "Urueña", family: "Vino", region: "Castilla y León", lat: 41.73, lng: -5.2 },
+  { name: "Valles de Benavente", family: "Vino", region: "Castilla y León", lat: 42.0, lng: -5.68 },
+  { name: "Valtiendas", family: "Vino", region: "Castilla y León", lat: 41.48, lng: -3.92 },
+  { name: "Almansa", family: "Vino", region: "Castilla-La Mancha", lat: 38.87, lng: -1.1 },
+  { name: "Calzadilla", family: "Vino", region: "Castilla-La Mancha", lat: 40.04, lng: -2.23 },
+  { name: "Campo de Calatrava", family: "Vino", region: "Castilla-La Mancha", lat: 38.98, lng: -3.93 },
+  { name: "Campo de La Guardia", family: "Vino", region: "Castilla-La Mancha", lat: 39.79, lng: -3.48 },
+  { name: "Casa del Blanco", family: "Vino", region: "Castilla-La Mancha", lat: 38.99, lng: -3.92 },
+  { name: "Dehesa del Carrizal", family: "Vino", region: "Castilla-La Mancha", lat: 39.31, lng: -4.25 },
+  { name: "Dominio de Valdepusa", family: "Vino", region: "Castilla-La Mancha", lat: 39.8, lng: -4.63 },
+  { name: "El Vicario", family: "Vino", region: "Castilla-La Mancha", lat: 39.02, lng: -3.95 },
+  { name: "Finca Élez", family: "Vino", region: "Castilla-La Mancha", lat: 38.52, lng: -2.52 },
+  { name: "Guijoso", family: "Vino", region: "Castilla-La Mancha", lat: 39.14, lng: -2.2 },
+  { name: "La Jaraba", family: "Vino", region: "Castilla-La Mancha", lat: 39.42, lng: -2.76 },
+  { name: "La Mancha", family: "Vino", region: "Castilla-La Mancha", lat: 39.28, lng: -3.1 },
+  { name: "Los Cerrillos", family: "Vino", region: "Castilla-La Mancha", lat: 38.64, lng: -3.46 },
+  { name: "Manchuela", family: "Vino", region: "Castilla-La Mancha", lat: 39.2, lng: -1.55 },
+  { name: "Méntrida", family: "Vino", region: "Castilla-La Mancha", lat: 40.24, lng: -4.19 },
+  { name: "Mondéjar", family: "Vino", region: "Castilla-La Mancha", lat: 40.32, lng: -3.11 },
+  { name: "Pago Florentino", family: "Vino", region: "Castilla-La Mancha", lat: 38.78, lng: -4.08 },
+  { name: "Ribera del Júcar", family: "Vino", region: "Castilla-La Mancha", lat: 39.48, lng: -2.28 },
+  { name: "Río Negro", family: "Vino", region: "Castilla-La Mancha", lat: 40.98, lng: -2.87 },
+  { name: "Rosalejo", family: "Vino", region: "Castilla-La Mancha", lat: 39.44, lng: -4.91 },
+  { name: "Uclés", family: "Vino", region: "Castilla-La Mancha", lat: 39.98, lng: -2.86 },
+  { name: "Valdepeñas", family: "Vino", region: "Castilla-La Mancha", lat: 38.76, lng: -3.38 },
+  { name: "Vallegarcía", family: "Vino", region: "Castilla-La Mancha", lat: 39.36, lng: -4.39 },
+  { name: "Alella", family: "Vino", region: "Cataluña", lat: 41.5, lng: 2.29 },
+  { name: "Cataluña / Catalunya", family: "Vino", region: "Cataluña", lat: 41.82, lng: 1.47 },
+  { name: "Conca de Barberà", family: "Vino", region: "Cataluña", lat: 41.38, lng: 1.16 },
+  { name: "Costers del Segre", family: "Vino", region: "Cataluña", lat: 41.62, lng: 0.62 },
+  { name: "Empordà", family: "Vino", region: "Cataluña", lat: 42.27, lng: 2.96 },
+  { name: "Montsant", family: "Vino", region: "Cataluña", lat: 41.16, lng: 0.82 },
+  { name: "Penedès", family: "Vino", region: "Cataluña", lat: 41.35, lng: 1.7 },
+  { name: "Pla de Bages", family: "Vino", region: "Cataluña", lat: 41.73, lng: 1.83 },
+  { name: "Priorat / Priorato", family: "Vino", region: "Cataluña", lat: 41.14, lng: 0.82 },
+  { name: "Tarragona", family: "Vino", region: "Cataluña", lat: 41.12, lng: 1.24 },
+  { name: "Terra Alta", family: "Vino", region: "Cataluña", lat: 41.05, lng: 0.44 },
+  { name: "Ribera del Guadiana", family: "Vino", region: "Extremadura", lat: 38.92, lng: -6.34 },
+  { name: "Monterrei", family: "Vino", region: "Galicia", lat: 41.94, lng: -7.44 },
+  { name: "Rías Baixas", family: "Vino", region: "Galicia", lat: 42.43, lng: -8.65 },
+  { name: "Ribeira Sacra", family: "Vino", region: "Galicia", lat: 42.42, lng: -7.55 },
+  { name: "Ribeiro", family: "Vino", region: "Galicia", lat: 42.29, lng: -8.14 },
+  { name: "Valdeorras", family: "Vino", region: "Galicia", lat: 42.42, lng: -6.98 },
+  { name: "Vinos de Madrid", family: "Vino", region: "Madrid", lat: 40.23, lng: -3.75 },
+  { name: "Bullas", family: "Vino", region: "Murcia", lat: 38.05, lng: -1.67 },
+  { name: "Yecla", family: "Vino", region: "Murcia", lat: 38.61, lng: -1.11 },
+  { name: "Bolandin", family: "Vino", region: "Navarra", lat: 42.2, lng: -1.69 },
+  { name: "Navarra", family: "Vino", region: "Navarra", lat: 42.52, lng: -1.67 },
+  { name: "Pago de Arínzano", family: "Vino", region: "Navarra", lat: 42.72, lng: -2.03 },
+  { name: "Pago de Otazu", family: "Vino", region: "Navarra", lat: 42.86, lng: -1.76 },
+  { name: "Prado de Irache", family: "Vino", region: "Navarra", lat: 42.67, lng: -2.03 },
+  { name: "Arabako Txakolina / Txakolí de Álava / Chacolí de Álava", family: "Vino", region: "País Vasco", lat: 42.99, lng: -2.94 },
+  { name: "Bizkaiko Txakolina / Chacolí de Bizkaia / Txakolí de Bizkaia", family: "Vino", region: "País Vasco", lat: 43.22, lng: -2.73 },
+  { name: "Getariako Txakolina / Chacolí de Getaria / Txakolí de Getaria", family: "Vino", region: "País Vasco", lat: 43.3, lng: -2.2 },
+  { name: "Alicante", family: "Vino", region: "Comunidad Valenciana", lat: 38.35, lng: -0.49 },
+  { name: "Chozas Carrascal", family: "Vino", region: "Comunidad Valenciana", lat: 39.5, lng: -1.09 },
+  { name: "El Terrerazo", family: "Vino", region: "Comunidad Valenciana", lat: 39.55, lng: -1.2 },
+  { name: "Los Balagueses", family: "Vino", region: "Comunidad Valenciana", lat: 39.5, lng: -1.04 },
+  { name: "Tharsys", family: "Vino", region: "Comunidad Valenciana", lat: 39.49, lng: -1.1 },
+  { name: "Utiel-Requena", family: "Vino", region: "Comunidad Valenciana", lat: 39.49, lng: -1.1 },
+  { name: "Valencia", family: "Vino", region: "Comunidad Valenciana", lat: 39.47, lng: -0.38 },
+  { name: "Vera de Estenas", family: "Vino", region: "Comunidad Valenciana", lat: 39.47, lng: -1.1 },
+];
+
+const ALL_DOP_SEEDS = [...DOP_SEEDS, ...WINE_DOP_SEEDS];
+
+type WineStyle = "tinto" | "blanco" | "rosado";
+
+const WHITE_WINE_DOPS = new Set([
+  "Cava",
+  "Condado de Huelva",
+  "Jerez-Xérès-Sherry / Jerez / Xérès / Sherry",
+  "Lebrija",
+  "Málaga",
+  "Manzanilla-Sanlúcar de Barrameda / Manzanilla",
+  "Montilla-Moriles",
+  "Abona",
+  "El Hierro",
+  "Islas Canarias",
+  "La Gomera",
+  "La Palma",
+  "Lanzarote",
+  "Rueda",
+  "Alella",
+  "Penedès",
+  "Terra Alta",
+  "Monterrei",
+  "Rías Baixas",
+  "Ribeiro",
+  "Valdeorras",
+  "Arabako Txakolina / Txakolí de Álava / Chacolí de Álava",
+  "Bizkaiko Txakolina / Chacolí de Bizkaia / Txakolí de Bizkaia",
+  "Getariako Txakolina / Chacolí de Getaria / Txakolí de Getaria",
+  "Valencia",
+]);
+
+const ROSE_WINE_DOPS = new Set([
+  "Cigales",
+  "León",
+  "Navarra",
+  "Pla i Llevant",
+]);
+
+const wineStyleFor = (name: string): WineStyle => {
+  if (WHITE_WINE_DOPS.has(name)) return "blanco";
+  if (ROSE_WINE_DOPS.has(name)) return "rosado";
+  return "tinto";
+};
+
+const imageFor = (seed: DopSeed, id: string) => {
+  if (seed.family === "Vino") {
+    return publicAsset(`/imagenes-dop/vino-${wineStyleFor(seed.name)}.jpg`);
+  }
+  return publicAsset(`/imagenes-dop/${id}.jpg`);
+};
+
 const slug = (value: string) =>
   value
     .normalize("NFD")
@@ -150,6 +311,7 @@ const profiles: Record<string, FlavorProfile> = {
   Queso: { dulce: 2, salado: 6, acido: 3, amargo: 3, umami: 8, grasa: 7 },
   Sidra: { dulce: 4, salado: 0, acido: 7, amargo: 2, umami: 1, grasa: 0 },
   Tubérculo: { dulce: 4, salado: 1, acido: 1, amargo: 1, umami: 3, grasa: 0 },
+  Vino: { dulce: 3, salado: 0, acido: 6, amargo: 3, umami: 2, grasa: 0 },
   Vinagre: { dulce: 3, salado: 1, acido: 10, amargo: 2, umami: 3, grasa: 0 },
   "Colorante natural": { dulce: 1, salado: 0, acido: 0, amargo: 2, umami: 1, grasa: 0 },
 };
@@ -172,12 +334,13 @@ const nutrients: Record<string, Nutrients> = {
   Queso: { calorias: 390, proteinas: 25, grasas: 31, carbohidratos: 2, micronutrientes: { principal: "calcio" } },
   Sidra: { calorias: 49, proteinas: 0, grasas: 0, carbohidratos: 4, micronutrientes: { principal: "ácidos orgánicos" } },
   Tubérculo: { calorias: 77, proteinas: 2, grasas: 0.1, carbohidratos: 17, micronutrientes: { principal: "potasio" } },
+  Vino: { calorias: 83, proteinas: 0, grasas: 0, carbohidratos: 3, micronutrientes: { principal: "polifenoles" } },
   Vinagre: { calorias: 88, proteinas: 0, grasas: 0, carbohidratos: 17, micronutrientes: { principal: "ácido acético" } },
   "Colorante natural": { calorias: 0, proteinas: 0, grasas: 0, carbohidratos: 0, micronutrientes: { principal: "ácido carmínico" } },
 };
 
 const unitFor = (family: string): Food["unidad"] => {
-  if (family.includes("Aceite") || family === "Sidra" || family === "Vinagre") return "litro";
+  if (family.includes("Aceite") || family === "Sidra" || family === "Vinagre" || family === "Vino") return "litro";
   return "kg";
 };
 
@@ -189,6 +352,7 @@ const priceFor = (family: string) => {
   if (family === "Miel") return 14;
   if (family === "Molusco") return 8;
   if (family === "Fruto seco") return 18;
+  if (family === "Vino") return 12;
   if (family === "Vinagre") return 16;
   return 6;
 };
@@ -299,6 +463,13 @@ const detailFor = (family: string) => {
       territory: "Las variedades de manzana y la cultura sidrera de la zona condicionan su perfil.",
     };
   }
+  if (family === "Vino") {
+    return {
+      product: "vino",
+      traits: "Expresa acidez, fruta, estructura y aromas de crianza o juventud, con estilos que van del blanco fresco al tinto concentrado, el espumoso o el vino generoso.",
+      territory: "La variedad de uva, el suelo, el clima y la elaboracion local vinculan cada denominacion con su paisaje vitivinicola.",
+    };
+  }
   if (family.includes("Tub")) {
     return {
       product: "tuberculo",
@@ -337,7 +508,7 @@ const originFor = (seed: DopSeed) => {
   return `${detail.territory} Esta ficha resume su categoria, localizacion y perfil sensorial para consulta rapida dentro del catalogo DOP.`;
 };
 
-export const initialFoods: Food[] = DOP_SEEDS.map((seed, index) => {
+export const initialFoods: Food[] = ALL_DOP_SEEDS.map((seed, index) => {
   const profile = profiles[seed.family];
   const id = slug(seed.name);
   return {
@@ -346,7 +517,7 @@ export const initialFoods: Food[] = DOP_SEEDS.map((seed, index) => {
     descripcion: descriptionFor(seed),
     origen: { pais: "España", region: seed.region, lat: seed.lat, lng: seed.lng },
     procedencia: originFor(seed),
-    imagen: publicAsset(`/imagenes-dop/${id}.jpg`),
+    imagen: imageFor(seed, id),
     familia: seed.family,
     perfil_sabor: profile,
     intensidad_sabor: calculateFlavorIntensity(profile),
