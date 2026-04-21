@@ -1,0 +1,95 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Food {
+  id          String   @id
+  nombre      String
+  descripcion String
+  pais        String
+  region      String
+  lat         Float
+  lng         Float
+  procedencia String
+  imagen      String?
+  familia     String
+  dulce       Int
+  salado      Int
+  acido       Int
+  amargo      Int
+  umami       Int
+  grasa       Int
+  intensidad  Int
+  calorias    Float
+  proteinas   Float
+  grasas      Float
+  carbohidratos Float
+  micronutrientes Json
+  price       Price?
+  recipeItems RecipeIngredient[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Price {
+  id          String @id @default(cuid())
+  foodId      String @unique
+  food        Food   @relation(fields: [foodId], references: [id], onDelete: Cascade)
+  precioPorUnidad Float
+  unidad      Unit
+  updatedAt   DateTime @updatedAt
+}
+
+model Pairing {
+  id        String @id @default(cuid())
+  baseId    String
+  targetId  String
+  score     Int?
+  notes     String?
+  createdAt DateTime @default(now())
+
+  @@unique([baseId, targetId])
+}
+
+model Recipe {
+  id        String @id
+  nombre    String
+  raciones  Int
+  margen    Float?
+  pasos     Json
+  items     RecipeIngredient[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RecipeIngredient {
+  id       String @id @default(cuid())
+  recipeId String
+  recipe   Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  foodId   String
+  food     Food   @relation(fields: [foodId], references: [id], onDelete: Restrict)
+  cantidad Float
+  unidad   Unit
+}
+
+model FavoritePairing {
+  id        String @id @default(cuid())
+  baseId    String
+  targetId  String
+  label     String?
+  createdAt DateTime @default(now())
+
+  @@unique([baseId, targetId])
+}
+
+enum Unit {
+  kg
+  g
+  litro
+  unidad
+}

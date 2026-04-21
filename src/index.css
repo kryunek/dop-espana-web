@@ -1,0 +1,161 @@
+@import "leaflet/dist/leaflet.css";
+@import "leaflet.markercluster/dist/MarkerCluster.css";
+@import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f4f1eb;
+  background: #101113;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 34%), #101113;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+select option {
+  background: #17191d;
+  color: #f4f1eb;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #14161a;
+  border-radius: 8px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #17191d;
+  color: #f4f1eb;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background-color: rgba(215, 181, 109, 0.22);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  background-color: rgba(215, 181, 109, 0.82);
+  color: #101113;
+  font-weight: 700;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+
+@layer components {
+  .input {
+    @apply rounded-lg border border-line px-3 py-2 text-sm outline-none transition focus:border-gold;
+    background: #0a0b0e;
+    color: #f4f1eb;
+  }
+
+  .fieldInput {
+    @apply h-10 w-full rounded-lg border border-line px-3 text-sm outline-none transition focus:border-gold;
+    background: #0a0b0e;
+    color: #f4f1eb;
+  }
+
+  .storyInput {
+    display: block;
+    width: 100%;
+    min-height: 128px;
+    resize: vertical;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #07080a;
+    color: #f4f1eb;
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    outline: none;
+    overflow-wrap: anywhere;
+  }
+
+  .storyInput:focus {
+    border-color: #d7b56d;
+  }
+
+  .storyInput::placeholder {
+    color: rgba(244, 241, 235, 0.52);
+  }
+
+  .coordinateBox {
+    display: flex;
+    min-height: 44px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #07080a;
+    color: #f4f1eb;
+    padding: 0 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .iconButton {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-line bg-white/5 text-white/70 transition hover:-translate-y-0.5 hover:bg-white/10 hover:text-ink;
+  }
+
+  .sectionTitle {
+    @apply flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white/70;
+  }
+
+  .infoPanel {
+    background: #090a0c;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: #f4f1eb;
+    padding: 1rem;
+  }
+
+  .infoBlock {
+    background: #111318;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: rgba(244, 241, 235, 0.88);
+    min-height: 150px;
+    padding: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 640px) {
+  .leaflet-popup-content {
+    max-width: 220px;
+    margin: 10px 12px;
+  }
+}
